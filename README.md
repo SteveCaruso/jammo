@@ -82,7 +82,7 @@ So for example, if you were writing a link to `page.html`:
 
 Using `@` links this way will only load in the new content and is the most efficient way to move around your site internally.
 
-### Second ?jammo= Links
+### Second - ?jammo= Links
 
 You can also pass the name of an internal page to the `jammo` GET variable, and the system will load it in. For example:
 
@@ -94,10 +94,10 @@ You can also pass the name of an internal page to the `jammo` GET variable, and 
 
 Keep in mind that linking this way may refresh the main page before loading the new content.
 
-### Third Using `.htaccess`
+### Third - Using `.htaccess`
 
 If you're running off of an Apache server that can make use of the `.htaccess` file that's included. It will re-map any requests through the `jammo` GET method above, so all URLs will look clean.
 
 ## To Do List
-- [] Handle HTTP errors (404, 500, etc.)
-- [] Find an alternative to `.htaccess` for a `node.js` served site.
+- [ ] Handle HTTP errors (404, 500, etc.)
+- [ ] Find an alternative to `.htaccess` for a `node.js` served site.
