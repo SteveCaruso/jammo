@@ -118,30 +118,30 @@ async function loadPage(page) {
     
     });
 
-    //Link up internal links
-    qa('a[new-link]').forEach((anchor) => { 
+//Link up internal links
+qa('a[new-link]').forEach((anchor) => { 
+    if (anchor.attributes.href.value[0] == "@") {
         anchor.addEventListener('click',(event) => {
             event.preventDefault();
-            if (anchor.attributes.href.value[0] == "@") 
-                loadPage(anchor.attributes.href.value.substring(1));
+            loadPage(anchor.attributes.href.value.substring(1));
             return false;
         });
-    });
+    }
+});
 
-    //"And we're done."
-    console.log("E simmo finuto.");
+console.log("E simmo finuto.")
 
 }
 
 //Step 3: Link up base internal links
 //Link up internal links
 qa('a').forEach((anchor) => { 
+if (anchor.attributes.href.value[0] == "@") {
     anchor.addEventListener('click',(event) => {
         event.preventDefault();
-        if (anchor.attributes.href.value[0] == "@") 
-            loadPage(anchor.attributes.href.value.substring(1));
-        return false;
+        loadPage(anchor.attributes.href.value.substring(1));
     });
+}
 });
 
 //Step 4: Load in home page content
