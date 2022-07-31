@@ -99,7 +99,7 @@ Keep in mind that linking this way may refresh the main page before loading the 
 If you're running off of an Apache server that can make use of the `.htaccess` file that's included. It will re-map any requests through the `jammo` GET method above, so all URLs will look clean. For example:
 
 ```
-<a href="/page">Here is a link</a> to another internal page that .htaccess will rewrite.
+<a href="/page/">Here is a link</a> to another internal page that .htaccess will rewrite.
 ```
 
 ## To Do List
